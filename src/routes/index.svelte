@@ -11,7 +11,7 @@
 </svelte:head>
 
 <section>
-  <h1>Un patro jeune près de chez toi</h1>
+  <h1 class="heading heading-1">Un patro jeune près de chez toi</h1>
   <p>Lance-toi dans un mouvement de jeunesse qui bouge.</p>
   <p>Ouvert à tous, pour les enfants de 5 à 18 ans.</p>
   <div>

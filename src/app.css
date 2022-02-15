@@ -1,21 +1,201 @@
 @import "@fontsource/fira-mono";
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  font-family: Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  --font-mono: "Fira Mono", monospace;
-  --pure-white: #ffffff;
-  --primary-color: #b9c6d2;
-  --secondary-color: #d0dde9;
-  --tertiary-color: #edf0f8;
-  --accent-color: #ff3e00;
-  --heading-color: rgba(0, 0, 0, 0.7);
-  --text-color: #444444;
-  --background-without-opacity: rgba(255, 255, 255, 0.7);
-  --column-width: 42rem;
-  --column-margin-top: 4rem;
+}
+
+@layer base {
+  html {
+    @apply font-body;
+    font-size: 16px;
+  }
+  .heading {
+    @apply font-heading;
+  }
+
+  .heading-1 {
+    @apply text-mobile-3xl;
+  }
+  .heading-2 {
+    @apply text-mobile-2xl;
+  }
+  .heading-3 {
+    @apply text-mobile-xl;
+  }
+  .heading-4 {
+    @apply text-mobile-lg;
+  }
+  .heading-5 {
+    @apply text-mobile-base;
+  }
+  .heading-6 {
+    @apply text-mobile-sm;
+  }
+  .t-xl {
+    @apply text-mobile-xl;
+  }
+  .t-lg {
+    @apply text-mobile-lg;
+  }
+  .t-base {
+    @apply text-mobile-base;
+  }
+  .t-sm {
+    @apply text-mobile-sm;
+  }
+  .t-xs {
+    @apply text-mobile-xs;
+  }
+}
+
+@media screen(tablet) {
+  html {
+    font-size: 20px;
+  }
+  .heading-1 {
+    @apply text-tablet-3xl;
+  }
+  .heading-2 {
+    @apply text-tablet-2xl;
+  }
+  .heading-3 {
+    @apply text-tablet-xl;
+  }
+  .heading-4 {
+    @apply text-tablet-lg;
+  }
+  .heading-5 {
+    @apply text-tablet-base;
+  }
+  .heading-6 {
+    @apply text-tablet-sm;
+  }
+  .t-xl {
+    @apply text-tablet-xl;
+  }
+  .t-lg {
+    @apply text-tablet-lg;
+  }
+  .t-base {
+    @apply text-tablet-base;
+  }
+  .t-sm {
+    @apply text-tablet-sm;
+  }
+  .t-xs {
+    @apply text-tablet-xs;
+  }
+}
+
+@media screen(laptop) {
+  .heading-1 {
+    @apply text-laptop-3xl;
+    @apply font-bold;
+  }
+  .heading-2 {
+    @apply text-laptop-2xl;
+  }
+  .heading-3 {
+    @apply text-laptop-xl;
+  }
+  .heading-4 {
+    @apply text-laptop-lg;
+  }
+  .heading-5 {
+    @apply text-laptop-base;
+  }
+  .heading-6 {
+    @apply text-laptop-sm;
+  }
+  .t-xl {
+    @apply text-laptop-xl;
+  }
+  .t-lg {
+    @apply text-laptop-lg;
+  }
+  .t-base {
+    @apply text-laptop-base;
+  }
+  .t-sm {
+    @apply text-laptop-sm;
+  }
+  .t-xs {
+    @apply text-laptop-xs;
+  }
+}
+
+@media screen(desktop) {
+  .heading-1 {
+    @apply text-desktop-3xl;
+  }
+  .heading-2 {
+    @apply text-desktop-2xl;
+  }
+  .heading-3 {
+    @apply text-desktop-xl;
+  }
+  .heading-4 {
+    @apply text-desktop-lg;
+  }
+  .heading-5 {
+    @apply text-desktop-base;
+  }
+  .heading-6 {
+    @apply text-desktop-sm;
+  }
+  .t-xl {
+    @apply text-desktop-xl;
+  }
+  .t-lg {
+    @apply text-desktop-lg;
+  }
+  .t-base {
+    @apply text-desktop-base;
+  }
+  .t-sm {
+    @apply text-desktop-sm;
+  }
+  .t-xs {
+    @apply text-desktop-xs;
+  }
+}
+
+@media screen(retina) {
+  .heading-1 {
+    @apply text-retina-3xl;
+  }
+  .heading-2 {
+    @apply text-retina-2xl;
+  }
+  .heading-3 {
+    @apply text-retina-xl;
+  }
+  .heading-4 {
+    @apply text-retina-lg;
+  }
+  .heading-5 {
+    @apply text-retina-base;
+  }
+  .heading-6 {
+    @apply text-retina-sm;
+  }
+  .t-xl {
+    @apply text-retina-xl;
+  }
+  .t-lg {
+    @apply text-retina-lg;
+  }
+  .t-base {
+    @apply text-retina-base;
+  }
+  .t-sm {
+    @apply text-retina-sm;
+  }
+  .t-xs {
+    @apply text-retina-xs;
+  }
 }
