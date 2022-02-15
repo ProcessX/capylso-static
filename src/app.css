@@ -1,5 +1,5 @@
 @import "@fontsource/fira-mono";
-@import url("https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700;900&family=Montserrat:wght@400;500;600;700;900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -10,18 +10,23 @@
 
 @layer base {
   html {
-    @apply font-body;
     font-size: 16px;
+    @apply font-body;
+    @apply text-gray-500;
   }
   .heading {
     @apply font-heading;
+    @apply leading-heading;
+    @apply text-gray-600;
   }
 
   .heading-1 {
     @apply text-mobile-3xl;
+    @apply font-bold;
   }
   .heading-2 {
     @apply text-mobile-2xl;
+    @apply font-bold;
   }
   .heading-3 {
     @apply text-mobile-xl;
@@ -31,24 +36,34 @@
   }
   .heading-5 {
     @apply text-mobile-base;
+    @apply font-semibold;
   }
   .heading-6 {
     @apply text-mobile-sm;
   }
-  .t-xl {
+
+  .paragraph {
+    @apply leading-paragraph;
+  }
+  .paragraph-xl {
     @apply text-mobile-xl;
   }
-  .t-lg {
+  .paragraph-lg {
     @apply text-mobile-lg;
   }
-  .t-base {
+  .paragraph-base {
     @apply text-mobile-base;
   }
-  .t-sm {
+  .paragraph-sm {
     @apply text-mobile-sm;
   }
-  .t-xs {
+  .paragraph-xs {
     @apply text-mobile-xs;
+  }
+
+  .grid-container {
+    width: 100%;
+    @apply grid-cols-container-mobile;
   }
 }
 
@@ -89,6 +104,10 @@
   .t-xs {
     @apply text-tablet-xs;
   }
+
+  .grid-container {
+    @apply grid-cols-container-tablet;
+  }
 }
 
 @media screen(laptop) {
@@ -126,6 +145,10 @@
   .t-xs {
     @apply text-laptop-xs;
   }
+
+  .grid-container {
+    @apply grid-cols-container-laptop;
+  }
 }
 
 @media screen(desktop) {
@@ -162,6 +185,10 @@
   .t-xs {
     @apply text-desktop-xs;
   }
+
+  .grid-container {
+    @apply grid-cols-container-desktop;
+  }
 }
 
 @media screen(retina) {
@@ -197,5 +224,9 @@
   }
   .t-xs {
     @apply text-retina-xs;
+  }
+
+  .grid-container {
+    @apply grid-cols-container-retina;
   }
 }
