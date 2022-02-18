@@ -30,9 +30,11 @@
   }
   .heading-3 {
     @apply text-mobile-xl;
+    @apply font-bold;
   }
   .heading-4 {
     @apply text-mobile-lg;
+    @apply font-semibold;
   }
   .heading-5 {
     @apply text-mobile-base;
@@ -40,6 +42,7 @@
   }
   .heading-6 {
     @apply text-mobile-sm;
+    @apply uppercase;
   }
 
   .paragraph {
@@ -64,6 +67,79 @@
   .grid-container {
     width: 100%;
     @apply grid-cols-container-mobile;
+    @apply gap-x-4;
+  }
+
+  .btn {
+    @apply font-semibold;
+    @apply bg-neutral-400;
+    @apply px-5;
+    @apply duration-150;
+    height: 2.5em;
+    border-radius: 1.25em;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    color: white;
+    line-height: 1em;
+    width: max-content;
+    cursor: pointer;
+    transition-property: background-color;
+    white-space: nowrap;
+  }
+
+  .btn:hover {
+    @apply bg-neutral-600;
+  }
+
+  .btn-lg {
+    @apply px-6;
+    height: 3em;
+    border-radius: 1.5em;
+  }
+
+  .btn-sm {
+    @apply px-4;
+    height: 2em;
+    border-radius: 1em;
+  }
+
+  .btn-xs {
+    @apply text-mobile-xs;
+    @apply px-3;
+    height: 1.5em;
+    border-radius: 1em;
+  }
+
+  .link {
+    @apply duration-150;
+    @apply transition-colors;
+    @apply text-gray-500;
+    @apply font-semibold;
+    @apply underline;
+    @apply underline-offset-2;
+    @apply cursor-pointer;
+    font-size: 1rem;
+  }
+
+  .link:hover {
+    @apply text-gray-700;
+  }
+
+  .link-primary {
+    @apply text-primary-500;
+  }
+
+  .link-primary:hover {
+    @apply text-primary-600;
+  }
+
+  .link-secondary {
+    @apply text-secondary-500;
+  }
+
+  .link-secondary:hover {
+    @apply text-secondary-600;
   }
 }
 
@@ -188,6 +264,7 @@
 
   .grid-container {
     @apply grid-cols-container-desktop;
+    @apply gap-x-6;
   }
 }
 

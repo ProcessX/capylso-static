@@ -2,43 +2,63 @@
   import { page } from "$app/stores";
 </script>
 
-<header>
-  <p>Header</p>
-
-  <a>
+<header
+  class="w-screen flex justify-between py-2 px-4 border-b-2 border-gray-100 fixed top-0 left-0 bg-white"
+>
+  <a class="flex flex-nowrap gap-4 items-center cursor-pointer">
     <div>Logo</div>
-    <span>Patro de Glimes</span>
+    <span class="heading heading-4 hidden tablet:block"
+      >Patro de <span class="text-primary-500">Glimes</span></span
+    >
   </a>
 
-  <nav>
-    <ul>
+  <nav class="hidden desktop:flex gap-6 items-center">
+    <ul class="flex gap-6 items-center leading-4 font-medium">
       <li>
-        <a>Infos</a>
+        <a
+          class="cursor-pointer hover:text-primary-500  transition-colors duration-200"
+          >Infos</a
+        >
       </li>
       <li>
-        <a>Documents</a>
+        <a
+          class="cursor-pointer hover:text-primary-500  transition-colors duration-200"
+          >Documents</a
+        >
       </li>
       <li>
-        <a>News</a>
+        <a
+          class="cursor-pointer hover:text-primary-500  transition-colors duration-200"
+          >News</a
+        >
       </li>
       <li>
-        <a>Calendrier</a>
+        <a
+          class="cursor-pointer hover:text-primary-500  transition-colors duration-200"
+          >Calendrier</a
+        >
       </li>
       <li>
-        <a>Staff</a>
+        <a
+          class="cursor-pointer hover:text-primary-500  transition-colors duration-200"
+          >Staff</a
+        >
       </li>
       <li>
-        <a>Galerie</a>
+        <a
+          class="cursor-pointer hover:text-primary-500  transition-colors duration-200"
+          >Galerie</a
+        >
       </li>
     </ul>
-    <ul>
+    <ul class="flex gap-4">
       <li>
-        <a>Contact</a>
+        <a class="btn bg-secondary-500 hover:bg-secondary-600">Contact</a>
       </li>
     </ul>
   </nav>
 
-  <button>Burger</button>
+  <button class="desktop:hidden">Burger</button>
 
   <!--
 	<nav>

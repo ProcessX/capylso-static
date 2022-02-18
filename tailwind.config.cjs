@@ -32,22 +32,11 @@ function generateFontSizes() {
   return fontSize;
 }
 
-function generateGridContainers() {
-  let gridContainers = {};
-  for (const bp of Object.keys(breakpoints)) {
-    gridContainers[`container-${bp}`] = `max(1rem, calc((100% - (${breakpoints[bp]}px - 2rem)) / 2)) repeat(25, calc((min(${breakpoints[bp]}px, 100%) - 2rem) / 25)) max(1rem, calc((100% - (${breakpoints[bp]}px - 2rem)) / 2))`;
-
-  }
-  return gridContainers;
-}
-
-generateGridContainers();
-
 module.exports = {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     fontFamily: {
-      body: ['Lato', 'ui-sans-serif'],
+      body: ['Montserrat', 'ui-sans-serif'],
       heading: ['Montserrat', 'ui-sans-serif']
     },
 
@@ -90,10 +79,26 @@ module.exports = {
         'heading': '1.4em'
       },
       gridTemplateColumns: {
-        ...generateGridContainers(),
+        'container-mobile': `max(0px, calc((100% - (${breakpoints.mobile}px + 2rem)) / 2)) repeat(3, 1fr) max(0px, calc((100% - (${breakpoints.mobile}px + 2rem)) / 2))`,
+        'container-tablet': `max(0px, calc((100% - (${breakpoints.tablet}px + 2rem)) / 2)) repeat(12, 1fr) max(0px, calc((100% - (${breakpoints.tablet}px + 2rem)) / 2))`,
+        'container-laptop': `max(0px, calc((100% - (${breakpoints.laptop}px + 2rem)) / 2)) repeat(12, 1fr) max(0px, calc((100% - (${breakpoints.laptop}px + 2rem)) / 2))`,
+        'container-desktop': `max(0px, calc((100% - (${breakpoints.desktop}px + 3rem)) / 2)) repeat(12, 1fr) max(0px, calc((100% - (${breakpoints.desktop}px + 3rem)) / 2))`,
+        'container-retina': `max(0px, calc((100% - (${breakpoints.retina}px + 3rem)) / 2)) repeat(12, 1fr) max(0px, calc((100% - (${breakpoints.retina}px + 3rem)) / 2))`
       },
       gridColumn: {
         'span-25': '2 / -2'
+      },
+      gridColumnStart: {
+        '13': '13',
+        '14': '14',
+        '15': '15',
+        '16': '16'
+      },
+      gridColumnEnd: {
+        '13': '13',
+        '14': '14',
+        '15': '15',
+        '16': '16'
       }
     },
   },

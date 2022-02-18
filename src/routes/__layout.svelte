@@ -3,6 +3,7 @@
   import Footer from "$lib/footer/Footer.svelte";
   import Header from "$lib/header/Header.svelte";
   import "../app.css";
+  import "../theme/style.scss";
 </script>
 
 <Header />
@@ -15,5 +16,5 @@
 
 <Footer />
 
-<style>
+<style lang="scss">
 </style>
