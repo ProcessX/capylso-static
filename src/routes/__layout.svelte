@@ -1,18 +1,20 @@
 <script>
-	import Header from '$lib/header/Header.svelte';
-	import '../app.css';
+  import CallToAction from "$lib/callToAction/CallToAction.svelte";
+  import Footer from "$lib/footer/Footer.svelte";
+  import Header from "$lib/header/Header.svelte";
+  import "../app.css";
+  import "../theme/style.scss";
 </script>
 
 <Header />
 
 <main>
-	<slot />
+  <slot />
 </main>
 
-<footer>
-	<p>Footer</p>
-</footer>
+<CallToAction />
 
-<style>
+<Footer />
 
+<style lang="scss">
 </style>
