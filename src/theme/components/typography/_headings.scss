@@ -1,0 +1,29 @@
+@import "/src/theme/utilities/font";
+
+.heading {
+  @apply font-heading;
+
+  &-1 {
+    @include get-font-size-variations(4);
+  }
+
+  &-2 {
+    @include get-font-size-variations(3);
+  }
+
+  &-3 {
+    @include get-font-size-variations(2);
+  }
+
+  &-4 {
+    @include get-font-size-variations(1);
+  }
+
+  &-5 {
+    @include get-font-size-variations(0);
+  }
+
+  &-6 {
+    @include get-font-size-variations(-1);
+  }
+}

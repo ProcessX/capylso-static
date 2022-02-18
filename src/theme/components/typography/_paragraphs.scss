@@ -1,0 +1,21 @@
+@import "/src/theme/utilities/font";
+
+.paragraph {
+  font-size: 1rem;
+
+  &-xl {
+    @include get-font-size-variations(2);
+  }
+
+  &-lg {
+    @include get-font-size-variations(1);
+  }
+
+  &-sm {
+    @include get-font-size-variations(-1);
+  }
+
+  &-xs {
+    @include get-font-size-variations(-2);
+  }
+}

@@ -1,0 +1,35 @@
+@use "sass:math";
+
+$base-sizes-by-breakpoint: (
+  "mobile": 18px,
+  "tablet": none,
+  "laptop": 20px,
+  "desktop": none,
+  "retina": 24px,
+);
+
+$size-ratios-by-breakpoints: (
+  "mobile": 1.1,
+  "tablet": 1.2,
+  "laptop": 2,
+  "desktop": none,
+  "retina": 1.8,
+);
+
+@mixin get-font-size-variations($power) {
+  @each $bp, $ratio in $size-ratios-by-breakpoints {
+    @if $bp == "mobile" {
+      font-size: #{get-ratio-to-power($ratio, $power)}rem;
+    } @else {
+      @if $ratio != none {
+        @media (min-width: theme('screens.' + #{$bp})) {
+          font-size: #{get-ratio-to-power($ratio, $power)}rem;
+        }
+      }
+    }
+  }
+}
+
+@function get-ratio-to-power($ratio, $power) {
+  @return math.pow($ratio, $power);
+}

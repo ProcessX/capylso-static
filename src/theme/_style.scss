@@ -1,0 +1,11 @@
+//FONT IMPORT
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700;900&family=Montserrat:wght@400;500;600;700;900&display=swap");
+
+//TAILWIND
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+//THEME FILES
+@import "./components";
+@import "./layout";

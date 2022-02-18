@@ -2,19 +2,17 @@
   import CallToAction from "$lib/callToAction/CallToAction.svelte";
   import Footer from "$lib/footer/Footer.svelte";
   import Header from "$lib/header/Header.svelte";
-  import "../app.css";
-  import "../theme/style.scss";
+  import "../theme/_style.scss";
 </script>
 
-<Header />
+<!-- <Header /> -->
 
 <main>
   <slot />
 </main>
 
-<CallToAction />
+<!-- <CallToAction />
 
-<Footer />
-
+<Footer /> -->
 <style lang="scss">
 </style>

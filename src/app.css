@@ -1,11 +1,10 @@
-@import "@fontsource/fira-mono";
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700;900&family=Montserrat:wght@400;500;600;700;900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700;900&family=Montserrat:wght@400;500;600;700;900&display=swap");
 
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
-:root {
+/* :root {
 }
 
 @layer base {
@@ -306,4 +305,4 @@
   .grid-container {
     @apply grid-cols-container-retina;
   }
-}
+} */

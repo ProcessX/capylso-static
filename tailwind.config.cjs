@@ -36,11 +36,12 @@ module.exports = {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     fontFamily: {
-      body: ['Montserrat', 'ui-sans-serif'],
+      body: ['Lato', 'ui-sans-serif'],
       heading: ['Montserrat', 'ui-sans-serif']
     },
 
     screens: {
+      'mobile': `${breakpoints.mobile}px`,
       'tablet': `${breakpoints.tablet}px`,
       'laptop': `${breakpoints.laptop}px`,
       'desktop': `${breakpoints.desktop}px`,

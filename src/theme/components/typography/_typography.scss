@@ -1,0 +1,20 @@
+@import "/src/theme/utilities/font";
+
+@import "headings";
+@import "paragraphs";
+
+html {
+  @apply font-body;
+
+  @each $bp, $size in $base-sizes-by-breakpoint {
+    @if $bp == "mobile" {
+      font-size: $size;
+    } @else {
+      @if $size != null {
+        @media (min-width: theme('screens.' + #{$bp})) {
+          font-size: $size;
+        }
+      }
+    }
+  }
+}
