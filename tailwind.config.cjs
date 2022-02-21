@@ -10,7 +10,7 @@ module.exports = {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     fontFamily: {
-      body: ['Lato', 'ui-sans-serif'],
+      body: ['Montserrat', 'ui-sans-serif'],
       heading: ['Montserrat', 'ui-sans-serif']
     },
 
@@ -24,33 +24,33 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          "50": "#F4F8EC",
-          "100": "#E0ECCA",
-          "200": "#CBE0A9",
-          "300": "#B7D487",
-          "400": "#A3C865",
-          "500": "#8FBC43",
-          "600": "#729636",
-          "700": "#567128",
-          "800": "#394B1B",
-          "900": "#1D260D"
+          "50": "#E6F5FF",
+          "100": "#B9E2FE",
+          "200": "#8CD0FD",
+          "300": "#5FBDFC",
+          "400": "#32ABFB",
+          "500": "#0598FA",
+          "600": "#047AC8",
+          "700": "#035B96",
+          "800": "#023D64",
+          "900": "#011E32"
         },
         secondary: {
-          "50": "#FEF6E6",
-          "100": "#FDE6BA",
-          "200": "#FCD68D",
-          "300": "#FAC561",
-          "400": "#F9B534",
-          "500": "#F8A507",
-          "600": "#C68406",
-          "700": "#956304",
-          "800": "#634203",
-          "900": "#322101"
+          "50": "#FCE9E9",
+          "100": "#F6C0C0",
+          "200": "#F19898",
+          "300": "#EC6F70",
+          "400": "#E64748",
+          "500": "#E11E1F",
+          "600": "#B41819",
+          "700": "#871213",
+          "800": "#5A0C0D",
+          "900": "#2D0606"
         },
       },
       lineHeight: {
         'paragraph': '1.6em',
-        'heading': '1.4em',
+        'heading': '1.12em',
         'btn': '1em'
       },
       gridColumnStart: {

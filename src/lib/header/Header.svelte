@@ -3,9 +3,7 @@
   import Navbar from "./navbar/Navbar.svelte";
 </script>
 
-<header
-  class="w-screen flex justify-between py-2 px-4 border-b-2 border-gray-100 fixed top-0 left-0 bg-white"
->
+<header class="">
   <Navbar />
   <!--
 	<nav>

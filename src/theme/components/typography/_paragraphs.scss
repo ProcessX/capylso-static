@@ -1,9 +1,11 @@
 .paragraph {
   font-size: 1rem;
   @apply leading-paragraph;
+  @apply font-medium;
 
   &-xl {
     @include get-font-size-variations(2);
+    @apply font-normal;
   }
 
   &-lg {
@@ -12,9 +14,11 @@
 
   &-sm {
     @include get-font-size-variations(-1);
+    @apply font-normal;
   }
 
   &-xs {
     @include get-font-size-variations(-2);
+    @apply font-normal;
   }
 }

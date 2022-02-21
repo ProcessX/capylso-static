@@ -1,0 +1,64 @@
+@import "/src/theme/utilities/pageMargins";
+
+$header-padding: 0.5rem;
+
+$col-gap-mobile: map-get(
+  $map: $page-margins,
+  $key: "mobile",
+);
+
+$col-gap-tablet: map-get(
+  $map: $page-margins,
+  $key: "tablet",
+);
+
+$col-gap-laptop: map-get(
+  $map: $page-margins,
+  $key: "laptop",
+);
+
+$col-gap-desktop: map-get(
+  $map: $page-margins,
+  $key: "desktop",
+);
+
+$col-gap-retina: map-get(
+  $map: $page-margins,
+  $key: "retina",
+);
+
+header {
+  display: grid;
+  column-gap: $col-gap-mobile;
+  grid-template-columns: 0 1fr 0;
+  padding: $header-padding 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  @apply border-gray-100;
+  @apply border-b-2;
+  background: white;
+
+  @media screen and (min-width: theme("screens.tablet")) {
+    column-gap: $col-gap-tablet;
+  }
+
+  @media screen and (min-width: theme("screens.laptop")) {
+    column-gap: $col-gap-laptop;
+  }
+
+  @media screen and (min-width: theme("screens.desktop")) {
+    column-gap: $col-gap-desktop;
+  }
+
+  @media screen and (min-width: theme("screens.retina")) {
+    column-gap: $col-gap-retina;
+  }
+}
+
+header {
+  nav {
+    grid-column: 2/-2;
+  }
+}

@@ -1,22 +1,26 @@
 @use "sass:map";
 
 $btn-sizes: (
-  "base": 1rem,
-  "lg": 2rem,
-  "sm": 0.7rem,
-  "xs": 0.5rem,
+  "base": 3rem,
+  "lg": 4rem,
+  "sm": 2rem,
+  "xs": 1.5rem,
 );
 
 .btn {
   @apply bg-gray-500;
   @apply text-white;
-  @apply px-4;
   @apply transition-colors;
   @apply duration-200;
   @apply leading-btn;
+  @apply font-semibold;
+  @apply uppercase;
+  @apply tracking-widest;
 
   height: map.get($btn-sizes, "base");
   width: max-content;
+  font-size: 1rem;
+  padding: 0 1.5em;
 
   display: flex;
   align-items: center;
@@ -33,6 +37,7 @@ $btn-sizes: (
 
   &-sm {
     height: map.get($btn-sizes, "sm");
+    padding: 0 1em;
   }
 
   &-xs {
@@ -58,15 +63,23 @@ $btn-sizes: (
   &:hover {
     @apply bg-primary-600;
   }
+
+  svg {
+    fill: white;
+  }
 }
 
 .btn.btn-primary.btn-outline {
-  @apply border-primary-200;
+  @apply border-primary-100;
   @apply text-primary-500;
   @apply bg-transparent;
 
   &:hover {
     @apply bg-primary-50;
+  }
+
+  svg {
+    @apply fill-primary-500;
   }
 }
 
@@ -77,14 +90,57 @@ $btn-sizes: (
   &:hover {
     @apply bg-secondary-600;
   }
+
+  svg {
+    fill: white;
+  }
 }
 
 .btn.btn-secondary.btn-outline {
-  @apply border-secondary-200;
+  @apply border-secondary-50;
   @apply text-secondary-500;
   @apply bg-transparent;
 
   &:hover {
     @apply bg-secondary-50;
+  }
+
+  svg {
+    @apply fill-secondary-500;
+  }
+}
+
+.btn-icon.btn {
+  max-height: map.get($btn-sizes, "base");
+  width: map.get($btn-sizes, "base");
+  max-width: map.get($btn-sizes, "base");
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  text-indent: 100%;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    height: 1.2em;
+    width: 1.2em;
+  }
+
+  &-lg {
+    max-height: map.get($btn-sizes, "lg");
+    width: map.get($btn-sizes, "lg");
+    max-width: map.get($btn-sizes, "lg");
+  }
+
+  &-sm {
+    max-height: map.get($btn-sizes, "sm");
+    width: map.get($btn-sizes, "sm");
+    max-width: map.get($btn-sizes, "sm");
+  }
+
+  &-xs {
+    max-height: map.get($btn-sizes, "xs");
+    width: map.get($btn-sizes, "xs");
+    max-width: map.get($btn-sizes, "xs");
   }
 }

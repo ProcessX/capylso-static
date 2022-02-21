@@ -1,6 +1,7 @@
 {
   "links": [
-    { "label": "Linkeuh", "URL": "/" },
-    { "label": "Linkeuh", "URL": "/" }
+    { "label": "Cours", "URL": "/" },
+    { "label": "Agenda", "URL": "/" },
+    { "label": "Staff & moniteurs", "URL": "/" }
   ]
 }

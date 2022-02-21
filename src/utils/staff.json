@@ -1,0 +1,52 @@
+{
+  "instructors": [
+    {
+      "firstname": "Olivier",
+      "lastname": "Godart",
+      "qualifications": [
+        "Instructeur Trainer ADIP ***",
+        "Course Director SDA",
+        "Instructeur CMAS ***",
+        "Instructeur Trainer IDEA",
+        "Master Scuba Diver Trainer PADI",
+        "Instructeur TDI"
+      ]
+    },
+    {
+      "firstname": "Véronique",
+      "lastname": "Deloie",
+      "qualifications": [
+        "Instructeur Trainer ADIP ***",
+        "Course Director SDA",
+        "Instructeur CMAS ***",
+        "Scuba Instructeur IDEA",
+        "Assistant Instructeur PADI",
+        "Assistant Instructeur TSI"
+      ]
+    },
+    {
+      "firstname": "Pascal",
+      "lastname": "Vanhemelryck",
+      "qualifications": [
+        "Instructeur Trainer ADIP **",
+        "Master Director SDA",
+        "Scuba Instructeur IDEA"
+      ]
+    },
+    {
+      "firstname": "Jean-Philippe",
+      "lastname": "Demeyer",
+      "qualifications": [
+        "Instructeur Trainer ADIP *",
+        "Assistant Instructor SDA",
+        "Divemaster IDEA"
+      ]
+    }
+  ],
+  "members": [
+    {
+      "firstname": "Olivier",
+      "lastname": "Godart"
+    }
+  ]
+}

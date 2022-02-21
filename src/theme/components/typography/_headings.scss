@@ -3,28 +3,41 @@
 .heading {
   @apply font-heading;
   @apply leading-heading;
+  @apply text-gray-800;
+  margin-bottom: 0.8em;
 
   &-1 {
     @include get-font-size-variations(4);
+    @apply font-black;
+    @apply uppercase;
   }
 
   &-2 {
     @include get-font-size-variations(3);
+    @apply font-extrabold;
+    @apply uppercase;
   }
 
   &-3 {
     @include get-font-size-variations(2);
+    @apply font-extrabold;
+    @apply uppercase;
   }
 
   &-4 {
     @include get-font-size-variations(1);
+    @apply font-bold;
+    @apply uppercase;
   }
 
   &-5 {
     @include get-font-size-variations(0);
+    @apply font-bold;
   }
 
   &-6 {
     @include get-font-size-variations(-1);
+    @apply font-bold;
+    @apply uppercase;
   }
 }
