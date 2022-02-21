@@ -1,0 +1,103 @@
+@import "/src/theme/utilities/pageMargins";
+
+$col-gap-mobile: map-get(
+  $map: $page-margins,
+  $key: "mobile",
+);
+
+$col-gap-tablet: map-get(
+  $map: $page-margins,
+  $key: "tablet",
+);
+
+$col-gap-laptop: map-get(
+  $map: $page-margins,
+  $key: "laptop",
+);
+
+$col-gap-desktop: map-get(
+  $map: $page-margins,
+  $key: "desktop",
+);
+
+$col-gap-retina: map-get(
+  $map: $page-margins,
+  $key: "retina",
+);
+
+.grid-container {
+  display: grid;
+
+  column-gap: $col-gap-mobile;
+
+  grid-template-columns:
+    max(
+      0px,
+      calc((100% - (theme("screens.mobile") + (2 * $col-gap-mobile))) / 2)
+    )
+    repeat(6, 1fr)
+    max(
+      0px,
+      calc((100% - (theme("screens.mobile") + (2 * $col-gap-mobile))) / 2)
+    );
+
+  @media screen and (min-width: theme("screens.tablet")) {
+    column-gap: $col-gap-tablet;
+
+    grid-template-columns:
+      max(
+        0px,
+        calc((100% - (theme("screens.tablet") + (2 * $col-gap-tablet))) / 2)
+      )
+      repeat(12, 1fr)
+      max(
+        0px,
+        calc((100% - (theme("screens.tablet") + (2 * $col-gap-tablet))) / 2)
+      );
+  }
+
+  @media screen and (min-width: theme("screens.laptop")) {
+    column-gap: $col-gap-laptop;
+
+    grid-template-columns:
+      max(
+        0px,
+        calc((100% - (theme("screens.laptop") + (2 * $col-gap-laptop))) / 2)
+      )
+      repeat(12, 1fr)
+      max(
+        0px,
+        calc((100% - (theme("screens.laptop") + (2 * $col-gap-laptop))) / 2)
+      );
+  }
+
+  @media screen and (min-width: theme("screens.desktop")) {
+    column-gap: $col-gap-desktop;
+
+    grid-template-columns:
+      max(
+        0px,
+        calc((100% - (theme("screens.desktop") + (2 * $col-gap-desktop))) / 2)
+      )
+      repeat(12, 1fr)
+      max(
+        0px,
+        calc((100% - (theme("screens.desktop") + (2 * $col-gap-desktop))) / 2)
+      );
+  }
+
+  @media screen and (min-width: theme("screens.retina")) {
+    column-gap: $col-gap-retina;
+
+    grid-template-columns:
+      max(
+        0px,
+        calc((100% - (theme("screens.retina") + (2 * $col-gap-retina))) / 2)
+      )
+      repeat(12, 1fr)
+      max(
+        0px,
+        calc((100% - (theme("screens.retina") + (2 * $col-gap-retina))) / 2)
+      );
+  }
+}

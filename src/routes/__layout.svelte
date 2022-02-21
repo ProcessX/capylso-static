@@ -5,7 +5,7 @@
   import "../theme/_style.scss";
 </script>
 
-<!-- <Header /> -->
+<Header />
 
 <main>
   <slot />

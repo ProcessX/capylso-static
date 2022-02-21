@@ -2,6 +2,7 @@
 
 .heading {
   @apply font-heading;
+  @apply leading-heading;
 
   &-1 {
     @include get-font-size-variations(4);

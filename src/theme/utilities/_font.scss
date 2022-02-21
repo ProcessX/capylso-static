@@ -11,9 +11,9 @@ $base-sizes-by-breakpoint: (
 $size-ratios-by-breakpoints: (
   "mobile": 1.1,
   "tablet": 1.2,
-  "laptop": 2,
+  "laptop": 1.25,
   "desktop": none,
-  "retina": 1.8,
+  "retina": 1.3,
 );
 
 @mixin get-font-size-variations($power) {

@@ -14,7 +14,18 @@
   <p class="paragraph">Index</p>
   <p class="paragraph paragraph-sm">Index</p>
   <p class="paragraph paragraph-xs">Index</p>
-  <a>Button</a>
+  <a class="btn btn-lg btn-primary btn-outline">Button</a>
+  <div class="grid-container">
+    <a class="btn btn-lg btn-outline">Button</a>
+  </div>
+
+  <div class="grid-container mb-4">
+    <p class="col-layout col-span-6 bg-gray-300">test</p>
+    <p class="col-layout col-span-6 bg-gray-300">test</p>
+  </div>
+  <div class="grid-container mb-4">
+    <p class="col-layout col-layout-left col-span-7 bg-gray-300">test</p>
+  </div>
 </section>
 
 <style>

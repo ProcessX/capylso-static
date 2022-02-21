@@ -6,32 +6,6 @@ const breakpoints = {
   retina: 1560
 }
 
-const fontRatio = {
-  mobile: 1.2,
-  tablet: 1.25,
-  laptop: 1.28,
-  desktop: 1.3,
-  retina: 1.4
-};
-
-const fontSizeNames = {
-  crescent: ['base', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl', '6xl', '7xl'],
-  decrescent: ['sm', 'xs']
-};
-
-function generateFontSizes() {
-  let fontSize = {};
-  for (const [screenSize, ratio] of Object.entries(fontRatio)) {
-    for (let i = 0; i < fontSizeNames.crescent.length; i++) {
-      fontSize[`${screenSize}-${fontSizeNames.crescent[i]}`] = `${ratio ** i}rem`;
-    }
-    for (let i = 0; i < fontSizeNames.decrescent.length; i++) {
-      fontSize[`${screenSize}-${fontSizeNames.decrescent[i]}`] = `${ratio ** -(i + 1)}rem`;
-    }
-  };
-  return fontSize;
-}
-
 module.exports = {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
@@ -47,7 +21,6 @@ module.exports = {
       'desktop': `${breakpoints.desktop}px`,
       'retina': `${breakpoints.retina}px`,
     },
-    fontSize: generateFontSizes(),
     extend: {
       colors: {
         primary: {
@@ -77,29 +50,16 @@ module.exports = {
       },
       lineHeight: {
         'paragraph': '1.6em',
-        'heading': '1.4em'
-      },
-      gridTemplateColumns: {
-        'container-mobile': `max(0px, calc((100% - (${breakpoints.mobile}px + 2rem)) / 2)) repeat(3, 1fr) max(0px, calc((100% - (${breakpoints.mobile}px + 2rem)) / 2))`,
-        'container-tablet': `max(0px, calc((100% - (${breakpoints.tablet}px + 2rem)) / 2)) repeat(12, 1fr) max(0px, calc((100% - (${breakpoints.tablet}px + 2rem)) / 2))`,
-        'container-laptop': `max(0px, calc((100% - (${breakpoints.laptop}px + 2rem)) / 2)) repeat(12, 1fr) max(0px, calc((100% - (${breakpoints.laptop}px + 2rem)) / 2))`,
-        'container-desktop': `max(0px, calc((100% - (${breakpoints.desktop}px + 3rem)) / 2)) repeat(12, 1fr) max(0px, calc((100% - (${breakpoints.desktop}px + 3rem)) / 2))`,
-        'container-retina': `max(0px, calc((100% - (${breakpoints.retina}px + 3rem)) / 2)) repeat(12, 1fr) max(0px, calc((100% - (${breakpoints.retina}px + 3rem)) / 2))`
-      },
-      gridColumn: {
-        'span-25': '2 / -2'
+        'heading': '1.4em',
+        'btn': '1em'
       },
       gridColumnStart: {
         '13': '13',
         '14': '14',
-        '15': '15',
-        '16': '16'
       },
       gridColumnEnd: {
         '13': '13',
         '14': '14',
-        '15': '15',
-        '16': '16'
       }
     },
   },

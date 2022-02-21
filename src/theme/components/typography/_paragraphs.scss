@@ -1,7 +1,6 @@
-@import "/src/theme/utilities/font";
-
 .paragraph {
   font-size: 1rem;
+  @apply leading-paragraph;
 
   &-xl {
     @include get-font-size-variations(2);

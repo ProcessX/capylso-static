@@ -1,0 +1,17 @@
+.col-layout {
+  &:first-child {
+    grid-column-start: 2;
+  }
+  @media screen and (max-width: calc(theme("screens.laptop") - 1px)) {
+    grid-column-start: 2;
+    grid-column-end: -2;
+  }
+}
+
+.col-layout.col-layout-left {
+  grid-column-start: 1;
+}
+
+.col-layout.col-layout-right {
+  grid-column-end: -1;
+}

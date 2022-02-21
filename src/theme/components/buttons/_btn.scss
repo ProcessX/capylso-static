@@ -1,0 +1,90 @@
+@use "sass:map";
+
+$btn-sizes: (
+  "base": 1rem,
+  "lg": 2rem,
+  "sm": 0.7rem,
+  "xs": 0.5rem,
+);
+
+.btn {
+  @apply bg-gray-500;
+  @apply text-white;
+  @apply px-4;
+  @apply transition-colors;
+  @apply duration-200;
+  @apply leading-btn;
+
+  height: map.get($btn-sizes, "base");
+  width: max-content;
+
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+
+  &:hover {
+    @apply bg-gray-600;
+  }
+
+  &-lg {
+    height: map.get($btn-sizes, "lg");
+  }
+
+  &-sm {
+    height: map.get($btn-sizes, "sm");
+  }
+
+  &-xs {
+    height: map.get($btn-sizes, "xs");
+  }
+
+  &-outline {
+    @apply border-2;
+    @apply border-gray-200;
+    @apply bg-transparent;
+    @apply text-gray-500;
+
+    &:hover {
+      @apply bg-gray-100;
+    }
+  }
+}
+
+//PRIMARY
+.btn.btn-primary {
+  @apply bg-primary-500;
+
+  &:hover {
+    @apply bg-primary-600;
+  }
+}
+
+.btn.btn-primary.btn-outline {
+  @apply border-primary-200;
+  @apply text-primary-500;
+  @apply bg-transparent;
+
+  &:hover {
+    @apply bg-primary-50;
+  }
+}
+
+//SECONDARY
+.btn.btn-secondary {
+  @apply bg-secondary-500;
+
+  &:hover {
+    @apply bg-secondary-600;
+  }
+}
+
+.btn.btn-secondary.btn-outline {
+  @apply border-secondary-200;
+  @apply text-secondary-500;
+  @apply bg-transparent;
+
+  &:hover {
+    @apply bg-secondary-50;
+  }
+}
